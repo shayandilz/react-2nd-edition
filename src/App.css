@@ -1,32 +1,60 @@
-.App {
-  text-align: center;
+body{
+    background-color: #f9f9f9
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+/*NAVBAR*/
+#navbar_main{
+    border-bottom: 2px solid grey;
+    padding-bottom: 3px;
+    padding-top: 20px
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#navbar_main > div > div > div > a {
+    padding-bottom: 15px;
 }
-
-.App-link {
-  color: #61dafb;
+#navbar_main > div > div > div > i {
+    padding-bottom: 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#navbar_main > div > div > div > i > span{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;   
+}
+/*CATEGORY SECTION*/
+#category{
+    border-bottom: 2px solid grey;
+}
+.fa-user-circle{
+    color: #8a151b;
+    font-size: 30px;
+    
+}
+#form_div{
+    position: relative;
+    width:100%;
+}
+#form_div > input {
+    background-color: #8b8b8b
+}
+#form_div > button{
+    position: absolute;
+    bottom: 4px
+}
+#form_div > ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #d2d2d2;
+    text-align: right;
+    direction: rtl
+}
+#form_div > form > ::-webkit-input{
+    text-align: end
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+    text-align: right;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white;
+    text-align: right;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+    text-align: right;
 }
