@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const Track = (props) => {
+
+const SearchResult = (props) => {
     const { title, price, thumb, id } = props
     console.log(props);
+    
   return (
       
     <div className="col-md-6">
@@ -21,4 +23,4 @@ const Track = (props) => {
     </div>
   )
 }
-export default Track
+export default SearchResult

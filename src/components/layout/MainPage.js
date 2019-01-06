@@ -1,11 +1,11 @@
 import React from 'react'
-import Tracks from '../tracks/Tracks'
+
 
 
 const MainPage = () => {
   return (
     <React.Fragment>
-      {/* <Tracks /> */}
+      <h3>hi</h3>
     </React.Fragment>
   )
 }

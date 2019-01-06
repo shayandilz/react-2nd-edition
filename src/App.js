@@ -6,6 +6,7 @@ import MainPage from './components/layout/MainPage'
 import { Provider } from './context'
 import {Products} from './components/tracks/Products'
 import Category from './components/tracks/Category'
+import Tracks from './components/pages/searchComponent/searchMap';
 class App extends Component {
   render() {
     return (
@@ -23,8 +24,9 @@ class App extends Component {
             
         <div className="container">
           <Switch>
-              <Route exact path="/" component={MainPage}/>
-              <Route exact path="/products/item/:id" component={Products}/>
+              <Route exact path="/homepage" component={MainPage}/>
+              <Route  path="/searchresult" component={Tracks}/>
+              <Route  path="/products/item/:id" component={Products}/>
           </Switch>
         </div>   
         </React.Fragment>

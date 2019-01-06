@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from '../tracks/Search'
+import Search from '../pages/searchComponent/Search'
 const Navbar = () => {
   return(
     
