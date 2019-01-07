@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {Consumer} from '../../../context'
-import {Link} from 'react-router-dom'
  class Search extends Component {
      state = {
          productTitle: '',
@@ -18,7 +17,7 @@ import {Link} from 'react-router-dom'
                 payload: res.data.output.items
             })
             
-            // this.setState({items: res.data.output.items})
+            this.setState({items: res.data.output.items})
             
         })
         .catch(err => console.log(err))
@@ -27,6 +26,7 @@ import {Link} from 'react-router-dom'
          this.setState({ [e.target.name]: e.target.value})
      }
   render() {
+    console.log(this.props);
     return (
       <Consumer>
           {value => {

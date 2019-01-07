@@ -1,11 +1,18 @@
 import React from 'react'
-
-
+import Banner from '../sections/Carousel'
+import CategoryHorizontal from '../sections/CategoryHorizontal'
 
 const MainPage = () => {
   return (
     <React.Fragment>
-      <h3>hi</h3>
+       <div className="container-fluid">
+           <div className="col-md-12">
+            <Banner /> 
+            <CategoryHorizontal />
+           </div>
+           
+        </div>
+        
     </React.Fragment>
   )
 }
