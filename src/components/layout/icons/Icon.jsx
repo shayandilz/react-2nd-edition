@@ -3,9 +3,12 @@ import PropTypes from 'prop-types'
 const Icon = props => {
     const styles = {
         img: {
-            width: "60px",
-            height: "60px",
-            backgroundColor: "#f9f9f9"
+            width: "40px",
+            height: "40px",
+            textAlign: "center",
+            marginLeft: "15px",
+            marginTop: "8px"
+            
         }
     };
     return <img style={styles.img} src={props.icon} />;

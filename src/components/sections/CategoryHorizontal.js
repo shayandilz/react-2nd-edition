@@ -6,7 +6,8 @@ import Swiper from 'react-id-swiper';
 
 export default class List extends Component {
     state = {
-        icon: [],
+        icons_png:{ICONS},
+        icons: [],
         apiUrl:'http://test.technovaa.ir/offernew/user/get/categories'
     }
 
@@ -15,20 +16,21 @@ export default class List extends Component {
         with_ob:"false"}))
         .then(res => {
             // console.log(res.data)
-            this.setState({icon: res.data.output.categories[0]}) 
+            this.setState({icons: res.data.output.categories}) 
             
         })
         .catch(err => console.log(err))
      }  
-
+     
   render() {
-      const cat_icon = this.state
-      console.log(cat_icon);
+      
+      
+    //   console.log(icons_icon);
       
     const params = {
-        slidesPerView: 5,
-        spaceBetween: 50,
-        slidesPerGroup: 2,
+        slidesPerView: 8,
+        spaceBetween: 40,
+        slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: false,
         rebuildOnUpdate: true,
@@ -37,23 +39,27 @@ export default class List extends Component {
           prevEl: '.swiper-button-prev'
         }
       };
-   
-      return(
-        <Swiper {...params}>
-          <div>
-              
-              <a href={cat_icon.icon.object_types}><Icon className="carddd" icon={ICONS.ADD_CARD}/>
-              <h6>{cat_icon.icon.name}</h6></a>
-              </div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
-          <div><a href="#"><Icon className="carddd" icon={ICONS.ADD_CARD}/></a></div>
+      const categ_list = this.state.icons.map(( item, index) => {
+      
+         console.log(this.state.icons_png.ICONS);
           
-        </Swiper>
+        return (
+            
+            <div className="container" id="icon_circle" key={index.toString()}>
+                <a >
+                    
+                    <Icon icon={this.state.icons_png.ICONS.ADD_CARD} />
+                    <h6 >{item.name}</h6>
+                     
+                </a>
+                
+            </div>
+            
+            
+        )
+   })
+      return(
+        <Swiper className="swippper" {...params}>{categ_list}</Swiper>
       )
     
     }

@@ -17,7 +17,7 @@ class App extends Component {
           <Navbar/>
           <div id="category">
               <div className="container-fluid row" >
-              <div className="col-md-1 offset-md-10">
+              <div className="col-md-2 offset-md-8">
               <Category />
               </div>
           </div>

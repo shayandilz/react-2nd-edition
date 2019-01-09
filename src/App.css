@@ -14,9 +14,13 @@ body{
     padding-bottom: 15px;
 }
 #navbar_main > div > div > div > i > span{
-    margin-left: 10px;
+    margin-left: 15px;
     color: black;
     font-size: 15px;   
+}
+.fa-search{
+    margin-left: 10px;
+    
 }
 /*CATEGORY SECTION*/
 #category{
@@ -32,7 +36,8 @@ body{
     width:100%;
 }
 #form_div > input {
-    background-color: #8b8b8b
+    background-color: #8b8b8b;
+    margin-left: 15px
 }
 #form_div > button{
     position: absolute;
@@ -58,5 +63,27 @@ body{
     color: white;
     text-align: right;
 }
+/*Banner & Category Icon*/
+#B_cat{
+    background-color: #d2d2d2;
+    padding: 0;
+    margin-top: 15px;
+}
+#icon_circle{
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    margin-top: 25px;
+    height: 100px;
+    width: 100px!important;
+    box-shadow: 1px 2px 9px 5px #888888;
+}
 
 
+#icon_circle > a > h6 {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3px;
+}
+.swiper-container{
+    height: 160px;
+}
