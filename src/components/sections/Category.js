@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Catpng from '../layout/category.png'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 class Category extends Component {
@@ -9,7 +10,7 @@ class Category extends Component {
         this.toggle = this.toggle.bind(this);
         this.state = {
             categories: [],
-            apiUrl:'http://test.technovaa.ir/offernew/user/get/categories',
+            apiUrl:'https://api2.off-er.ir/user/get/categories',
           dropdownOpen: false
         };
       }
@@ -36,7 +37,7 @@ class Category extends Component {
     )
          }) 
     return(
-        <Dropdown className="dropdown_menu" isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
+        <Dropdown  isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
             <DropdownToggle caret>CATEGORY</DropdownToggle>
                 <DropdownMenu right>
                      {categ_list}

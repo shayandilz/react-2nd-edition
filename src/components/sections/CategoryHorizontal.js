@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { ICONS } from '../../components/layout/icons'
-import Icon from '../layout/icons/Icon'
+
+
 import Swiper from 'react-id-swiper';
 
 export default class List extends Component {
     state = {
-        icons_png:{ICONS},
+        
         icons: [],
-        apiUrl:'http://test.technovaa.ir/offernew/user/get/categories'
+        apiUrl:'https://api2.off-er.ir/user/get/categories'
     }
 
     componentDidMount(){
@@ -40,27 +40,18 @@ export default class List extends Component {
         }
       };
       const categ_list = this.state.icons.map(( item, index) => {
-      
-         console.log(this.state.icons_png.ICONS);
-          
+         
         return (
-            
-            <div className="container" id="icon_circle" key={index.toString()}>
-                <a >
-                    
-                    <Icon icon={this.state.icons_png.ICONS.ADD_CARD} />
+            <div id="icon_circle" key={index.toString()}>
+                <a> 
+                    <img src={item.icon.url}  alt="PRODUCTS"/>
                     <h6 >{item.name}</h6>
-                     
-                </a>
-                
-            </div>
-            
-            
+                    </a>
+                 </div>     
         )
    })
       return(
         <Swiper className="swippper" {...params}>{categ_list}</Swiper>
-      )
-    
+      ) 
     }
 }

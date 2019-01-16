@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Redirect} from 'react-router-dom'
 import {Consumer} from '../../../context'
  class Search extends Component {
      state = {
          productTitle: '',
-         apiUrl:'http://test.technovaa.ir/offernew/user/get/items',
+         apiUrl:'https://api2.off-er.ir/user/get/items',
+         redirect: false
          
      }
      findProduct = (dispatch, e) => {
@@ -17,7 +19,7 @@ import {Consumer} from '../../../context'
                 payload: res.data.output.items
             })
             
-            this.setState({items: res.data.output.items})
+            this.setState({items: res.data.output.items, redirect:true})
             
         })
         .catch(err => console.log(err))
@@ -26,7 +28,8 @@ import {Consumer} from '../../../context'
          this.setState({ [e.target.name]: e.target.value})
      }
   render() {
-    console.log(this.props);
+   
+    if(this.state.redirect) return <Redirect to="/searchresult"/>
     return (
       <Consumer>
           {value => {

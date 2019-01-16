@@ -2,18 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const SearchResult = (props) => {
-    const { title, price, thumb, id } = props
+    const { title, price, thumb, id, store_name } = props
     console.log(props);
     
   return (
       
-    <div className="col-md-6">
-      <div className="card mb-4 shadow-sm">
+    <div className="col-md-4" id="searchresult">
+      <div className="card mb-2 ml-2 mt-2 shadow-sm">
         <div className="card-body">
-            <h6>{title}</h6>
+            
             <img  src={thumb} alt=""/>
-            <p className="card-text">
-                <strong>Price</strong> : {price} <i className="fa fa-dollar-sign"></i>
+            <h6 className="muted">{store_name}</h6>
+            <h6>{title}</h6>
+            <p >
+               {price} 
             </p>
             <Link to={`products/item/${id}`} className="btn btn-dark btn-block">
             <i className="fa fa-chevron-right"></i> View Product

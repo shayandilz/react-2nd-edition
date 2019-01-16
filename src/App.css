@@ -19,13 +19,19 @@ body{
     font-size: 15px;   
 }
 .fa-search{
-    margin-left: 10px;
+    top: 10px
     
+}
+#navbar_main > div >div > div > img {
+    width:30px
 }
 /*CATEGORY SECTION*/
 #category{
     border-bottom: 2px solid grey;
 }
+#category > div > div > div {
+    margin-right: 60px
+} 
 .fa-user-circle{
     color: #8a151b;
     font-size: 30px;
@@ -37,7 +43,8 @@ body{
 }
 #form_div > input {
     background-color: #8b8b8b;
-    margin-left: 15px
+    text-align: right
+    
 }
 #form_div > button{
     position: absolute;
@@ -84,6 +91,184 @@ body{
     text-align: center;
     margin-top: 3px;
 }
+#icon_circle > a > img{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 10px
+}
 .swiper-container{
     height: 160px;
 }
+.carousel .slide{
+    background: white!important;
+   
+    
+}
+#editors{
+    background: white;
+    border-radius: 10px;
+    
+}
+.products_info_extra {
+    text-align: right;
+    background: #e6e6e6;
+    border-radius: 5px;
+}
+/* .products_info > div > span {
+    font-weight: 700;
+    font-size: 14px;
+    font-style: oblique
+} */
+.products_info > div {
+    margin-bottom: 10px
+}
+.products_info > div > img {
+    width: 150px;
+    
+    
+}
+.products_info > h6{
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+    margin-top:20px;
+}
+.btn_active{
+    width:180px;
+    margin-left: -15px;
+    margin-right: 10px
+}
+.btn_disabled{
+    width:180px;
+    text-decoration: line-through;
+}
+#products{
+    background: #ffffff;
+    border-radius: 10px;
+    height: 400px;
+}
+.product_img{
+    margin-top: 20px;
+  
+    border-radius: 5px;
+   
+    height: 220px;
+    background: #ffffff;
+    box-shadow: 1px 2px 10px 2px #888888;
+}
+.product_img > img {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#products > div > div > div {
+    background: bottom;
+    background: #ffffff
+}
+#editors > div > div > div > h5 {
+    position: absolute;
+    top: 12%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600
+    
+    
+}
+.logo_editor{
+    width: 80px;
+    
+     
+}
+.containerClasss{
+    height:400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1
+}
+#editors > div > div :nth-child(2)  {
+    width: 140px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto
+   
+}
+#editors > div > div >  h6{
+    text-align: center;
+   margin-bottom: 10px;
+   font-weight: 700
+
+}
+#editors >  button {
+    margin: 0 auto; text-align: center; border: none; padding: 10px 20px
+    
+}
+#editors > div > div > p {
+    color: black;
+    text-decoration: line-through;
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    
+}
+#editors > div > div > span{
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+   
+}
+.banner1 > img{
+    width: 100%;
+    height: auto;
+}
+
+#banner2 :nth-child(1){
+    width: 50%;
+  padding: 5px;
+  padding-left:0px; 
+  border-radius:12px 
+
+}
+#banner2 :nth-child(2){
+    width: 50%;
+  padding: 5px;
+  padding-right: 0px;
+  border-radius:12px 
+
+}
+div#root {
+    overflow-x: hidden;
+}
+#searchresult > div > div > img {
+    width:120px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer {
+    height: 200px;
+    background: #D2D2D2;
+    margin-right: 0px;
+    margin-left: 0px; 
+}
+#footer > div > ul {
+    list-style-type: none;
+    
+}
+#footer > div > ul > li{
+    margin-bottom: 20px
+}
+   
