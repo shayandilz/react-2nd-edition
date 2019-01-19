@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Provider>
       <Router>
-        <React.Fragment>
+      
          
           <Switch>
               <Route exact path="/" component={MainPage}/>
@@ -20,7 +20,7 @@ class App extends Component {
               <Route  path="/products/item/:id" component={Products}/>
           </Switch>
        
-        </React.Fragment>
+     
       </Router>
       </Provider>
     );

@@ -8,7 +8,7 @@ import SearchResult from './SearchResult'
       <Consumer>
           {value => {
               const { items } = value
-              console.log(items);
+            //   console.log(items);
               if(items === undefined || items.length === 0){
                 return <Spinner />
               }else{
@@ -30,3 +30,4 @@ import SearchResult from './SearchResult'
   }
 }
 export default Tracks
+        

@@ -44,9 +44,9 @@ export default class Editors extends Component {
               <div className="col-md-12 mb-5" >
               
                 <div className="wrapper-contain">
-                   <div>
+                   <div className="figure">
                       <img className="logo_editor" src={logo} alt=""/>
-                      <h5>{item.off_percent}%</h5>
+                      <h5 className="figure-caption mt-1 pr-3">{item.off_percent}%</h5>
                    </div>
                       <img className="card-img-top" src={item.thumb_url} alt=""/>
                       <h6>{item.name}</h6>

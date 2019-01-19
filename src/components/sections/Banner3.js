@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import {Consumer} from '../../context'
 export default class Banner3 extends Component {
-    state = {
-        banner1: [],
-        apiUrl:'https://api2.off-er.ir/user/get/carousel' 
-    };
-      componentDidMount(){
-        axios.post(`${this.state.apiUrl}`,JSON.stringify({carousel_id:"42",
-        refresh:"true"}))
-        .then(res => {
-            // console.log(res.data)
-            this.setState({banner: res.data.output[0].url}) 
-             
-        })
-        .catch(err => console.log(err))
-      } 
+   
+       
   render() {
-    const banner = this.state.banner
-    // console.log(banner);
+   
     
     return (
+      <Consumer>
+      {value => {
+          const {banner3} = value
+         //  console.log(banner1);
+          return(
+           <React.Fragment>
+           <div className="banner1 mt-3" >
+             <img src={banner3}alt="" />
+           </div>
+        </React.Fragment>
+        
+          )
+          
+          
+      }}
+    </Consumer>
       
-      <div className="banner1 mt-3" >
-      <img src={banner}alt="" />
-      </div>
             
     
     )
