@@ -30,7 +30,7 @@ body{
     border-bottom: 2px solid grey;
 }
 #category > div > div > div {
-    margin-right: 60px
+    margin-left: 60px
 } 
 .fa-user-circle{
     color: #8a151b;
@@ -106,9 +106,21 @@ body{
    
     
 }
+.img_editors{
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: auto;
+}
+.nowrap{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
 #editors{
     background: white;
     border-radius: 10px;
+    height: 360px
     
 }
 .products_info_extra {
@@ -171,10 +183,10 @@ body{
     background: bottom;
     background: #ffffff
 }
-#editors > div > div > div > h5 {
+#editors :nth-child(1) h5 {
     position: absolute;
     top: 12%;
-    left: 22%;
+    left: 20%;
     transform: translate(-50%, -50%);
     color: aliceblue;
     font-size: 16px;
@@ -189,7 +201,7 @@ body{
      
 }
 .containerClasss{
-    height:400px;
+    height:380px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -197,6 +209,7 @@ body{
     padding: 0;
     z-index: 1
 }
+
 #editors > div > div :nth-child(2)  {
     width: 140px;
     display: block; 
@@ -204,17 +217,12 @@ body{
     margin-right: auto
    
 }
-#editors > div > div >  h6{
-    text-align: center;
-   margin-bottom: 10px;
-   font-weight: 700
 
-}
-#editors >  button {
+#editors :nth-child(5)  button {
     margin: 0 auto; text-align: center; border: none; padding: 10px 20px
     
 }
-#editors > div > div > p {
+#editors :nth-child(4) p {
     color: black;
     text-decoration: line-through;
     display: inline-block;
@@ -222,7 +230,7 @@ body{
     text-align: left;
     
 }
-#editors > div > div > span{
+#editors :nth-child(4) span{
     color: red;
     text-decoration: none;
     display: inline-block;
@@ -234,19 +242,17 @@ body{
     width: 100%;
     height: auto;
 }
-
+#banner2{
+    padding: 0
+}
 #banner2 :nth-child(1){
     width: 50%;
-  padding: 5px;
-  padding-left:0px; 
-  border-radius:12px 
+
 
 }
 #banner2 :nth-child(2){
     width: 50%;
-  padding: 5px;
-  padding-right: 0px;
-  border-radius:12px 
+  
 
 }
 div#root {
@@ -272,3 +278,12 @@ div#root {
     margin-bottom: 20px
 }
    
+i.dropdown-toggle{
+    content: url('../src/components/layout/category.png');
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 35px;
+}
+i.dropdown-toggle:after{
+    content:"\2014"; display: inline-block; margin: 0 10px;  
+}

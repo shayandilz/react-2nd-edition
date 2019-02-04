@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Catpng from '../layout/category.png'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 class Category extends Component {
@@ -33,12 +32,13 @@ class Category extends Component {
     const categ_list = this.state.categories.map((item, index) => {
     return (
         
-        <DropdownItem key={index.toString()}><a href="#">{item.name}</a></DropdownItem>
+        <DropdownItem key={index.toString()}><a href="_blank">{item.name}</a></DropdownItem>
+        
     )
          }) 
     return(
         <Dropdown  isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
-            <DropdownToggle caret>CATEGORY</DropdownToggle>
+            <DropdownToggle tag="i" caret>CATEGORY</DropdownToggle>
                 <DropdownMenu right>
                      {categ_list}
                 </DropdownMenu>

@@ -2,6 +2,22 @@ import React, { Component } from 'react'
 import axios from 'axios'
 const Context = React.createContext();
 
+
+export const axiosDashboard = () => {
+    const URL = (`https://api2.off-er.ir/user/dashboard`);
+    const proxyurl = (`https://cors-anywhere.herokuapp.com/`)
+    return axios(URL, {
+      method: 'POST',
+      data: JSON.stringify({refresh:"true"}),
+    })
+      .then(response => response.data)
+      .catch(error => {
+        throw error;
+      });
+       
+  };
+
+
 const reducer = (state, action) => {
     switch(action.type){
         case 'SEARCH_TRACKS':
@@ -16,42 +32,64 @@ const reducer = (state, action) => {
 }
 
  export class Provider extends Component {
-     state = {
-         apiCarouselUrl:'https://api2.off-er.ir/user/get/carousel', 
-         banner1: [],
-         banner2:[],
-         banner3:[],
+     state = { 
          items:[],
+         apiUrl:'https://api2.off-er.ir/user/get/action',
+         data_cat:[],
+         actionItem:[],
+         icons: [],
+         uri:[],
+         request:[],
+         action_uri:[],
+         action_request:[],
+         editors:[],
+         Banner1:[],
          dispatch:action => this.setState(state => reducer(state, action))
      }
      componentDidMount(){
-        axios.post(`${this.state.apiCarouselUrl}`,JSON.stringify({carousel_id:"40",refresh:"true"}))
-        .then(res => {
-            // console.log(res.data)
-            this.setState({banner1: res.data.output[0].url}) 
-        return(
-        axios.post(`${this.state.apiCarouselUrl}`,JSON.stringify({carousel_id:"43",refresh:"true"}))
-        .then(res => {
-            // console.log(res.data)
-            this.setState({banner2: res.data.output})
-        return(
-        axios.post(`${this.state.apiCarouselUrl}`,JSON.stringify({carousel_id:"42",refresh:"true"}))
-        .then(res => {
-            // console.log(res.data)
-            this.setState({banner3: res.data.output[0].url})
-             
-             
+        axiosDashboard().then((res)=>{
+            
+      this.setState({
+        data_cat: res.output.sections[1],
+        actionItem: res.output.sections[3]
+      })
+      const{ id } = this.state.data_cat
+      const{ id:action_id } = this.state.actionItem
+      
+      
+      axios({
+        url:(`${this.state.apiUrl}`),
+        method: 'post',
+        data: JSON.stringify({refresh:"true",action_id:id})
+      }).then(res => {
+        this.setState({uri: res.data.output.uri,
+                       request:res.data.output.request                                 
         })
-        .catch(err => console.log(err))
-        )
-        })
-        .catch(err => console.log(err)))     
-        })
-        .catch(err => console.log(err))
-      } 
-     
+      axios({
+        url:(`${this.state.apiUrl}`),
+        method:`post`,
+        data:JSON.stringify({refresh:"true",action_id:action_id})
+      }).then(res => {
+        this.setState({action_uri: res.data.output.uri,
+        action_request: res.data.output.request})
+        
+      })
+        
+      }) 
+   }) 
+   
+}
+componentWillUpdate(nextProps, nextState){
+
+  
+    localStorage.setItem('uri',(nextState.uri))
+    localStorage.setItem('request',(nextState.request))
+    localStorage.setItem('action_uri',(nextState.action_uri))
+    localStorage.setItem('action_request',(nextState.action_request))
+   
+  }   
   render() {
-    //   console.log(this.state)
+   
     return (
      <Context.Provider value={this.state}>
      

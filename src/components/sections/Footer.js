@@ -11,23 +11,23 @@ export default class Footer extends Component {
                 <div className="col-md-4 py-3 px-lg-5">
                     <ul>
                         <li>
-                             <a>Contact Us</a>
+                             <a href="_blank">Contact Us</a>
                         </li>
                         <li>
-                             <a>About Us</a>
+                             <a  href="_blank">About Us</a>
                         </li>
                     </ul>
                 </div>
                 <div className="col-md-4 py-3 px-lg-5">
                     <ul>
                         <li>
-                            <a>Q&A</a>  
+                            <a  href="_blank">Q&A</a>  
                         </li>
                         <li>
-                            <a>Terms of use</a>
+                            <a  href="_blank">Terms of use</a>
                         </li>
                         <li>
-                             <a>Retail Stores</a>  
+                             <a  href="_blank">Retail Stores</a>  
                         </li>
                     </ul>
                 </div>

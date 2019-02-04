@@ -4,7 +4,6 @@ import './App.css';
 import MainPage from './components/layout/MainPage'
 import { Provider } from './context'
 import {Products} from './components/sections/Products'
-import Category from './components/sections/Category'
 import Tracks from './components/pages/searchComponent/searchMap';
 
 class App extends Component {
